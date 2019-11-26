@@ -12,21 +12,175 @@
 </head>
 <body>
   <div class="wrapper">
-    <header>
-
-    </header>
-    <div class="main-content">
-      <div class="container">
-        <h2>Headline H2</h2>
-        Content
+    <header class="page-header container">
+      <div class="header-logo">
+        <img src="src/assets/img/logo.png" alt="Кваст">
       </div>
-    </div>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="">История</a></li>
+          <li><a href="">Производство</a></li>
+          <li><a href="">Ассортимент</a></li>
+          <li><a href="">Где купить</a></li>
+        </ul>
+      </nav>
+      <div class="slider">
+        <span>Крафтовый квас<br>всему голова!</span>
+    </header>
+
+    <main class="main-content">
+      <section class="new-and-price">
+        <h2>Новинки</h2>
+        <div class="new-items">
+          <div class="new-item">
+            <h3>Вахтёр</h3>
+            <p>Алк. &#60; 1%<br>
+               Ккал: 35</p>
+            <p>Ржаной хлеб, Вода, Солод, Соль</p>
+            <img src="src/assets/img/bottle-left.jpg">
+            <p>Терпкий и мощный, вкус этого кваса взбодрит после тяжелого дня и придаст сил для вечерних приключений!</p>
+            <a href="№">Подробнее</a>
+            <a href="№">Купить</a>
+            <b>150 р.</b>
+          </div>
+          <div class="new-item">
+              <h3>Романтик</h3>
+              <p>Алк. &#60; 0,5%<br>
+                Ккал: 27</p>
+              <p>Ячменный хлеб, Вода, Солод, Апельсин</p>
+              <img src="src/assets/img/bottle-right.jpg">
+              <p>Легкий и освежающий напиток поможет сохранить отличное настроение в течение всего дня.</p>
+              <a href="№">Подробнее</a>
+              <a href="№">Купить</a>
+              <b>90 р.</b>
+            </div>
+        </div>
+      </section>
+      <section class="features">
+        <ul>
+          <li>
+            <h3>Варим сами</h3>
+            <p>Вот этими самыми руками. Эксперементируем и творим, что хотим.</p>
+          </li>
+          <li>
+            <h3>Своё, родное</h3>
+            <p>Не заработка ради, а импортзамещения для. Поднимаем производство.</p>
+          </li>
+          <li>
+            <h3>Не экономим</h3>
+            <p>Человек это то, что он ест и пьет. У нас только качественные ингредиенты.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="history">
+        <h2>Немного истории</h2>
+        <dl>
+          <dt>
+            <h3>Происхождение кваса</h3>
+            <i>Источник: ru.wikipedia.org</i>
+          </dt>
+          <dd>
+            <img src="src/assets/img/wiki-1.png">
+            <p>Квас на Руси появился в X-XI веке. Само слово «квас» тоже имеет древнерусское происхождение. Помимо России квас готовят в Белоруссии, Сербии, Македонии, Словакии и многих других странах, но называется он везде одинаково — квас.
+            </p>
+          </dd>
+          <br>
+            <dt>
+              <h3>Классификация кваса</h3>
+              <i>Источник: ru.wikipedia.org</i>
+            </dt>
+            <dd>
+             <img src="src/assets/img/wiki-2.png">
+             <p>По российскому ГОСТу для промышленного изготовления — это напиток с объёмной долей этилового спирта не более 1,2%, изготовленный в результате незавершённого спиртового и молочнокислого брожения сусла.</p>
+          </dd>
+        </dl>
+      </section>
+      <section class="media">
+        <h2>Пресса о нас</h2>
+        <div class="media-list">
+            <blockquote class="media-item">
+                <p>Сегодня мы провели дегустацию чего-то действительно новенького — крафтового кваса. Да, да, вы не ослышались! Спасибо Арсену и Руслану за то, что предоставили целую бочку своего напитка!</p>
+                <cite>Газета столичный Стольник</cite>
+                <a href="#">Читать далее</a>
+            </blockquote>
+        </div>
+      </section>
+      <section class="product-and-price">
+        <h2>Ассортимент</h2>
+        <table class="product-item">
+          <tr>
+            <th>Название</th>
+            <th>Алк.</th>
+            <th>Ккал</th>
+            <th>Объём</th>
+            <th>Стоимость</th>
+          </tr>
+          <tr>
+            <td>Классика</td>
+            <td>&lt; 1,2%</td>
+            <td>33</td>
+            <td>330 мл</td>
+            <td>120 Р.</td>
+          </tr>
+          <tr>
+            <td>Шабаш</td>
+            <td>&gt; 1,2%</td>
+            <td>45</td>
+            <td>330 мл</td>
+            <td>250 Р.</td>
+          </tr>
+          <tr>
+            <td>Вахтёр Новинка</td>
+            <td>&lt; 1%</td>
+            <td>35</td>
+            <td>0,5 л</td>
+            <td>150 Р.</td>
+          </tr>
+          <tr>
+            <td>Романтик Новинка</td>
+            <td>&lt; 0,5%</td>
+            <td>27</td>
+            <td>0,5 л</td>
+            <td>90 Р.</td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <h2>Заказать</h2>
+        <p>Не ждите пока нас отрекламируют, как Вятский квас, и мы поднимем цены! Закажите настоящий крафтовый квас сейчас. При заказе от 10 баррелей — скидка 10%.</p>
+        <form>
+          
+        </form>
+      </section>
+    </main>
   </div>
 
   <footer>
     <div class="container">
-      <p class="copyright">© webpack template 2019</p>
-      <p class="abuse"><a href="mailto:webpack@template.com">webpack@template.com</a></p>
+      <div class="header-logo">
+        <img src="src/assets/img/logo.png" alt="Кваст">
+      </div>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="">История</a></li>
+          <li><a href="">Производство</a></li>
+          <li><a href="">Ассортимент</a></li>
+          <li><a href="">Где купить</a></li>
+        </ul>
+      </nav>
+      <div class="social">
+        <a href="#">Инстаграм</a>
+        <a href="#">Фейсбук</a>
+        <a href="#">Вконтакте</a>
+      </div>
+      <div class="copyright">
+        <p>При перепечатке материалов ссылка на сайт обязательна!</p>
+        <span>
+          <img src="src/assets/img/htmlacademy.png">
+          <strong>Разработчик:</strong>
+          <a href="#">HTML Academy</a> 
+        </span>
+      </div>
     </div>
   </footer>
 </body>
