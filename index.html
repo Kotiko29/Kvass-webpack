@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./static/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./static/favicon/favicon-16x16.png">
   <link rel="manifest" href="./static/favicon/site.webmanifest"> -->
-  <title>Webpack Temple</title>
+  <title>kvass</title>
 </head>
 <body>
   <div class="wrapper">
@@ -26,53 +26,61 @@
           </ul>
         </nav>
         <ul id="slides">
-          <li class="slide showing"><p>Крафтовый квас<br>всему голова!</p></li>
-          <li class="slide"><p>Попей кваску,<br> разгони тоску.</p></li>
-          <li class="slide"><p>Молодой квас -<br> и тот играет.</li>
+          <li class="slide showing slide1"><p>Крафтовый квас<br>всему голова!</p></li>
+          <li class="slide slide2"><p>Попей кваску,<br> разгони тоску.</p></li>
+          <li class="slide slide3"><p>Молодой квас -<br> и тот играет.</li>
         </ul>
       </div>
     </header>
 
     <main class="main-content container">
       <section class="new-and-price">
-        <h2>Новинки</h2>
+        <h2 class="section-title">Новинки</h2>
         <div class="new-items">
           <div class="new-item">
             <h3>Вахтёр</h3>
-            <table>
-              <tr>
-                <td>Алк.</td>
-                <td>&lt; 1%</td>
-              </tr>
-              <tr>
-                <td>Ккал:</td>
-                <td>35</td>
-              </tr>
-            </table>
-            <p>Ржаной хлеб, Вода, Солод, Соль</p>
-            <img src="static/bottle-left.jpg" alt="Квас Вахтер"><br>
+            <div class="block-item">
+              <table class="table-item">
+                <caption>Ржаной хлеб, Вода, Солод, Соль</caption>
+                <tbody>
+                  <tr>
+                    <td>Алк.</td>
+                    <td>&lt; 1%</td>
+                  </tr>
+                  <tr>
+                    <td>Ккал:</td>
+                    <td>35</td>
+                  </tr>
+                </tbody>
+              </table>
+              <img src="static/bottle-left.jpg" alt="Квас Вахтер">
+            </div>
             <p>Терпкий и мощный, вкус этого кваса взбодрит после тяжелого дня и придаст сил для вечерних приключений!</p>
-            <a class="btn-white" href="#">Подробнее</a>
-            <a class="btn-brown" href="#">Купить</a>
+            <a class="btn btn-white" href="#">Подробнее</a>
+            <a class="btn btn-brown" href="#">Купить</a>
             <b>150 р.</b>
           </div>
           <div class="new-item">
             <h3>Романтик</h3>
-            <table>
-              <tr>
-                <td>Алк.</td>
-                <td>&lt; 0,5%</td>
-              </tr>
-              <tr>
-                <td>Ккал:</td>
-                <td>27</td>
-              </tr>
-            </table>
-            <p>Ячменный хлеб, Вода, Солод, Апельсин</p>
-            <img src="static/bottle-right.jpg" alt="Квас Романтик"><br>
+            <div class="block-item">
+              <table class="table-item">
+                <caption>Ячменный хлеб, Вода, Солод, Апельсин</caption>
+                <tbody>
+                  <tr>
+                    <td>Алк.</td>
+                    <td>&lt; 0,5%</td>
+                  </tr>
+                  <tr>
+                    <td>Ккал:</td>
+                    <td>27</td>
+                  </tr>
+                </tbody>
+              </table>
+              <img src="static/bottle-right.jpg" alt="Квас Романтик">
+            </div>
             <p>Легкий и освежающий напиток поможет сохранить отличное настроение в течение всего дня.</p>
-            <a class="btn-white" href="№">Подробнее</a>
-            <a class="btn-brown" href="№">Купить</a>
+            <a class="btn btn-white" href="№">Подробнее</a>
+            <a class="btn btn-brown" href="№">Купить</a>
             <b>90 р.</b>
           </div>
         </div>

@@ -31,6 +31,10 @@ module.exports = {
       filename: 'post.html',
       template: './post.html',
     }),
+    new HtmlWebpackPlugin({
+      filename: 'new-and-price.html',
+      template: './new-and-price.html',
+    }),
     new CopyWebpackPlugin([
       { from: './static', to: 'static' }
     ]),
