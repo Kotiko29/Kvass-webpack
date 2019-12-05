@@ -10,4 +10,3 @@ function nextSlide() {
     slides[currentSlide].className = 'slide showing';
 }
 */
-let slide = document.querySelector('.slide');
