@@ -114,43 +114,37 @@
       <section class="history">
         <div class="container">
           <h2 class="section-title">Немного истории</h2>
-          <dl>
-            <div class="theory-container">
-              <dt class="history-title">
-                Происхождение кваса
-                <i class="history-source">Источник:<a href="#">ru.wikipedia.org</a></i>
-              </dt>
-              <dd>
-                <img src="static/wiki-1.png" alt="Происхождение кваса">
-                <p>Квас на Руси появился в X-XI веке. Само слово «квас» тоже имеет древнерусское происхождение. Помимо России квас готовят в Белоруссии, Сербии, Македонии, Словакии и многих других странах, но называется он везде одинаково — квас.
-                </p>
-              </dd>
-            </div>
-            <div class="theory-container">
-              <dt class="history-title">
-                Классификация кваса
-                <i class="history-source">Источник:<a href="#">ru.wikipedia.org</a></i>
-              </dt>
-              <dd class="history-text">
-                <img src="static/wiki-2.png" alt="Классификация кваса">
-                <p>По российскому ГОСТу для промышленного изготовления — это напиток с объёмной долей этилового спирта не более 1,2%, изготовленный в результате незавершённого спиртового и молочнокислого брожения сусла.</p>
-              </dd>
-            </div>
+          <dl class="history-list">
+            <dt class="history-title">
+              <b>Происхождение кваса</b>
+              <i class="history-source">Источник:<a href="#">ru.wikipedia.org</a></i>
+            </dt>
+            <dd class="history-text">
+              <p>Квас на Руси появился в X-XI веке. Само слово «квас» тоже имеет древнерусское происхождение. Помимо России квас готовят в Белоруссии, Сербии, Македонии, Словакии и многих других странах, но называется он везде одинаково — квас.</p>
+              <img src="static/wiki-1.png" alt="Происхождение кваса">
+            </dd>
+            
+            <dt class="history-title">
+              <b>Классификация кваса</b>
+              <i class="history-source">Источник:<a href="#">ru.wikipedia.org</a></i>
+            </dt>
+            <dd class="history-text">
+              <p>По российскому ГОСТу для промышленного изготовления — это напиток с объёмной долей этилового спирта не более 1,2%, изготовленный в результате незавершённого спиртового и молочнокислого брожения сусла.</p>
+              <img src="static/wiki-2.png" alt="Классификация кваса">
+            </dd>
+            
           </dl>
         </div>
       </section>
 
-      <section class="review">
+      <section class="press">
         <div class="container">
           <h2 class="section-title">Пресса о нас</h2>
-          <div class="review-list">
-              <blockquote class="review-item">
-                  <p>Сегодня мы провели дегустацию чего-то действительно новенького — крафтового кваса. Да, да, вы не ослышались! Спасибо Арсену и Руслану за то, что предоставили целую бочку своего напитка!</p>
-                  <a class="btn review-btn" href="#">Читать далее</a>
-                  <cite class="review-author">Газета столичный Стольник</cite>
-                  
-              </blockquote>
-          </div>
+          <blockquote class="press-review">
+            <p class="press-text">Сегодня мы провели дегустацию чего-то действительно новенького — крафтового кваса. Да, да, вы не ослышались! Спасибо Арсену и Руслану за то, что предоставили целую бочку своего напитка!</p>
+            <a class="btn press-btn" href="#">Читать далее</a>
+            <cite class="press-author">Газета столичный Стольник</cite>
+          </blockquote>
         </div>
       </section>
 
@@ -207,12 +201,14 @@
               <input id="name" type="text" name="name">
             </div>
             <div class="feedback-form-group">
-              <label for="phone">Номер телефона:</label>
-              <input id="phone" type="tel" name="phone">
-            </div>
-            <div class="feedback-form-group">
-              <label for="phone2">Доп. номер:</label>
-              <input id="phone2" type="tel" name="phone2">
+              <div class="feedback-form-group-phone">
+                <label for="phone">Номер телефона:</label>
+                <input id="phone" type="tel" name="phone">
+              </div>
+              <div class="feedback-form-group">
+                <label for="phone2">Доп. номер:</label>
+                <input id="phone2" type="tel" name="phone2">
+              </div>
             </div>
             <div class="feedback-form-group">
               <label for="email">Email:</label>
@@ -247,34 +243,35 @@
     </main>
   </div>
 
-  <footer>
+  <footer class="main-footer">
     <div class="container">
-      <div class="header-logo">
-        <img src="static/logo.png" alt="Кваст">
-      </div>
+      <nav class="main-nav main-nav-footer">
+        <div class="footer-logo">
+          <img src="static/logo.png" alt="Кваст">
+        </div>
+          <ul class="main-nav-list">
+            <li class="main-nav-item"><a href="">История</a></li>
+            <li class="main-nav-item"><a href="">Производство</a></li>
+            <li class="main-nav-item"><a href="">Ассортимент</a></li>
+            <li class="main-nav-item"><a href="">Где купить</a></li>
+          </ul>
+        </nav>
+      <div class="footer-bottom">
+        <div class="social">
+          <ul class="social-list">
+            <li><a class="social-item inst" href="#"></a></li>
+            <li><a class="social-item fb" href="#"></a></li>
+            <li><a class="social-item vk" href="#"></a></li>
+          </ul>
+        </div>
 
-      <nav>
-        <ul class="main-nav">
-          <li><a href="">История</a></li>
-          <li><a href="">Производство</a></li>
-          <li><a href="">Ассортимент</a></li>
-          <li><a href="">Где купить</a></li>
-        </ul>
-      </nav>
-
-      <div class="social">
-        <a href="#">Инстаграм</a>
-        <a href="#">Фейсбук</a>
-        <a href="#">Вконтакте</a>
-      </div>
-
-      <div class="copyright">
-        <p>При перепечатке материалов ссылка на сайт обязательна!</p>
-        <span>
-          <img src="static/htmlacademy.png">
-          <strong>Разработчик:</strong>
-          <a href="#">HTML Academy</a> 
-        </span>
+        <div class="footer-copyright">
+          <p>При перепечатке материалов ссылка на сайт обязательна!</p>
+          <div class="copyright">
+            <a class="copyright-link" href="#"><img src="static/htmlacademy.png"></a>
+            <span class="copyright-dev">Разработчик: HTML Academy</span> 
+          </div>
+        </div>
       </div>
     </div>
   </footer>

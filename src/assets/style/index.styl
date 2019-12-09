@@ -2,7 +2,7 @@
 @import './fonts'
 @import './icons'
 @import './header'
-@import './new-and-price'
+@import './footer'
 @import './category'
 @import './sidebar'
 @import './post'
@@ -22,14 +22,400 @@ body
   display flex
   flex-direction column
   height 100%
-.section-title {
-  font-size 32px
-  text-transform uppercase
-}
 
+.section-title 
+  font-size 40px
+  line-height 47px
+  text-transform uppercase
+img 
+  max-width 100%
+  height auto
 
 .wrapper
   flex 1 0 auto
-  
-footer
-  flex 0 0 auto
+
+ .new-and-price 
+    margin-top 5px
+    background-color white
+    .container
+      width 1160px
+      max-width 100%
+      margin 0 auto
+      @media (max-width: 940px)
+        padding-right 10px
+        padding-left 10px
+      h3 
+        font-size 32px
+        text-transform uppercase
+      
+      .new-items
+        display flex
+        justify-content space-between
+        @media(max-width: 940px)
+          display flex
+          flex-direction column
+        .new-item
+          width 580px
+          padding-left 30px
+          padding-right 30px
+          border-left 1px solid rgba(0, 50, 50, 0.1) 
+          border-right 1px solid rgba(0, 50, 50, 0.1)
+          &:first-child
+            border-right none
+          .block-item
+            display flex
+            flex-direction row-reverse
+            justify-content flex-end
+            table, td
+              width:40%
+              font-size 16px
+              font-weight bold
+              text-transform uppercase
+
+              border 1px solid rgba(0, 50, 50, 0.1)
+              border-collapse collapse
+              td
+                padding 10px 20px
+              caption
+                font-size 14px
+                font-weight normal
+                text-transform none
+                caption-side bottom
+                text-align left
+                color rgb(82, 75, 75);
+        .btn 
+          display inline-block
+          padding 16px 40px
+          margin-right 20px
+          
+          font-size 16px
+          font-weight bold
+          text-align center
+          text-transform uppercase
+          vertical-align middle
+          text-decoration none
+          color #804325
+          border 3px solid #804325
+        .btn-brown
+          color white
+          background-color #804325
+   /*--------------------------------------------------------------------*/       
+  .features
+    display flex
+    margin-top 50px
+    background-color #ffcb78
+
+    .container
+      max-width 100%
+      margin 0 auto
+      @media (max-width: 940px)
+        padding-right 10px
+        padding-left 10px
+      .features-list
+        display flex
+        list-style none
+        justify-content space-around
+        h2 
+          font-size 16px
+          line-height 23px
+          font-weight bold
+          font-family "Arial", sans-serif
+          text-transform uppercase
+          text-decoration none
+          color black
+        .feature-item
+          width 30%
+          padding-right 60px
+          padding-left 50px
+          padding-top 80px
+          padding-bottom 50px
+          border-right 1px solid rgba(0, 50, 50, 0.1)
+          &:last-child
+            border none 
+        .feature-cook
+          background-image url(../img/pic1.svg)
+          background-position 30px 10px
+          background-size 80px 80px
+          background-repeat no-repeat
+        .feature-native
+          background-image url(../img/pic2.svg)
+          background-position 35px 0
+          background-size 80px 80px
+          background-repeat no-repeat
+        .feature-quality
+          background-image url(../img/pic3.svg)
+          background-position 50px 0
+          background-size 80px 80px
+          background-repeat no-repeat
+
+
+  .history
+    padding-top 70px
+    padding-bottom 60px
+    background-color white
+    .container
+      width 1160px
+      max-width 100%
+      margin 0 auto
+      @media (max-width: 940px)
+        padding-right 10px
+        padding-left 10px
+      .history-list  
+        display flex
+        flex-direction column
+        .history-title
+          display flex
+          align-items flex-start
+          justify-content space-between
+          margin-top 0
+          margin-bottom 20px
+          font-size 24px
+          font-weight bold
+          b   
+           margin 0
+           padding-bottom 30px
+           font-size 30px
+           line-height 27px
+           font-weight bold
+          .history-source  
+            font-size 16px
+            font-style italic
+            color black
+            a
+              color #834700
+              &:hover
+                color rgba(179, 113, 34, 0.5)
+              &:active 
+                color rgba(255, 203, 120,0.5)
+        .history-text   
+          margin 0
+          display flex
+          align-items center
+          justify-content space-between
+          &:first-of-type
+            margin-bottom 80px
+          img 
+            width 470px
+            margin-left 120px
+            border-radius 5px
+
+  .press 
+    padding-top 70px
+    padding-bottom 60px
+    padding-left 50px
+    padding-right 50px
+    background-color #ede5d8
+    .container
+      width 1160px
+      max-width 100%
+      margin 0 auto
+      @media (max-width: 940px)
+        padding-right 10px
+        padding-left 10px
+      .press-review
+        margin 0
+        display flex
+        flex-wrap wrap
+        justify-content space-between
+        .press-text
+          position relative
+          margin 0
+          margin-bottom 50px
+          margin-top:85px
+          padding-right 110px
+          &::before 
+            content ""
+            position absolute
+            top 10px
+            left -100px
+            width 50px
+            height 50px
+            background-image url(../img/spritesheet.png)
+            background-repeat no-repeat
+            background-position -10px -150px
+
+      .press-btn
+        display inline-block
+        padding 10px 20px
+        margin-right 20px
+        font-size 16px
+        font-weight bold
+        text-align center
+        text-transform uppercase
+        vertical-align middle
+        text-decoration none
+        color #aba6a6
+        border 3px solid rgba(214,206,195,0.5)
+      .press-author
+        font-size 24px
+        font-weight bold
+        text-transform uppercase
+        font-style none 
+
+  .product-and-price
+    padding-top 50px
+    padding-bottom 100px
+    .container
+      width 1160px
+      max-width 100%
+      margin 0 auto
+      @media (max-width: 940px)
+        padding-right 10px
+        padding-left 10px
+      .price-list
+        width 100%
+        border-collapse collapse
+        th 
+          font-weight normal
+          text-align left
+          text-transform uppercase
+          color #aba6a6
+        td,th
+          border-bottom 1px solid #aba6a6
+          padding 20px 10px
+          text-transform uppercase
+        .price-name
+          font-weight bold
+          sup
+            margin-left 20px
+            padding 3px
+            color white
+            background-color black
+            border-radius 3px
+
+  .feedback
+    padding-top 50px
+    padding-bottom 70px
+    background-color #ffcb78
+    color black
+    .container
+      width 1160px
+      max-width 100%
+      margin 0 auto
+      @media (max-width: 940px)
+        padding-right 10px
+        padding-left 10px
+      p   
+        padding-top 50px
+        padding-right 150px
+        padding-bottom 50px
+      .feedback-form
+        display flex
+        flex-direction column
+        .feedback-form-group
+          display flex
+          align-items baseline
+          justify-content space-between
+          margin-bottom 20px
+          .feedback-form-group-phone
+            display flex
+            flex-basis 50%
+            align-items baseline
+            justify-content space-between
+  footer
+    flex 0 0 auto
+    background-color black
+    padding 80px
+    .container
+      width 1160px
+      max-width 100%
+      margin 0 auto
+      @media (max-width: 940px)
+        padding-right 10px
+        padding-left 10px
+      .main-nav-footer
+        display flex
+        justify-content center
+        @media (max-width: 940px)
+          justify-content space-between
+        .footer-logo 
+          margin-right 100px
+        .main-nav-list
+          display flex
+          justify-content space-between
+          list-style none 
+          text-transform uppercase
+          padding-left 0
+          padding-right 0
+          padding-top 10px
+          padding-bottom 10px
+          border-top 1px solid rgba(255, 203, 120,0.3)
+          border-bottom 1px solid rgba(255, 203, 120,0.3)
+          @media (max-width: 940px)
+            flex-direction column
+            border none
+          li
+            margin-right 70px
+            &:last-child
+              margin-right 0
+            a
+              text-decoration none
+              color white
+              font-weight bold
+              &:hover
+                color #e6b48e 
+              &:active
+                color rgba(255, 255, 255, 0.3)
+      .footer-bottom
+        display flex
+        justify-content space-between
+        align-items center
+        margin-top 60px
+        margin-bottom 0
+        @media (max-width: 940px)
+          flex-direction column
+        .social
+          display flex
+          margin 0
+          padding 0
+          width 30%
+          .social-list
+            display flex
+            list-style none
+            .social-item
+              display inline-block
+              position relative
+              width 60px
+              height 60px
+              vertical-align top
+              background-color #1b1b1b
+              border 1px solid rgba(255, 203, 120,0.1)
+            .inst
+              background-image url(../img/sprite.svg)
+              background-repeat no-repeat
+              background-position-x -130px
+            .fb
+              background-image url(../img/sprite.svg)
+              background-repeat no-repeat
+              background-position-x 25px
+            .vk
+              background-image url(../img/sprite.svg)
+              background-repeat no-repeat
+              background-position-x -54px
+        .footer-copyright
+          display flex
+          justify-content space-between
+          font-size 14px
+          color #bbbbbb
+          width 50%
+          p  
+            margin-right 100px
+          .copyright
+            display flex
+            align-items center
+            .copyright-link
+              display flex
+              align-items center
+              justify-content center
+              width 60px
+              height 60px
+              background-color #1b1b1b
+              border 1px solid rgba(255, 203, 120,0.1)
+            .copyright-dev
+              margin-left 20px
+             
+
+
+
+
+
