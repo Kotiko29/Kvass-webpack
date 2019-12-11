@@ -194,50 +194,52 @@
       <section class="feedback">
         <div class="container">
           <h2 class="section-title">Заказать</h2>
-          <p>Не ждите пока нас отрекламируют, как Вятский квас, и мы поднимем цены! Закажите настоящий крафтовый квас сейчас. При заказе от 10 баррелей — скидка 10%.</p>
-          <form class="feedback-form" name="order-form" method="POST" action="#">
-            <div class="feedback-form-group"> 
-              <label for="name">Представтесь:</label>
-              <input id="name" type="text" name="name" placeholder="Как мы можем к вам обращаться?">
-            </div>
-            <div class="feedback-form-group">
-              <div class="feedback-form-group-phone">
-                <label for="phone">Номер телефона:</label>
-                <input id="phone" type="tel" name="phone">
+          <div class="form-container">
+            <p>Не ждите пока нас отрекламируют, как Вятский квас, и мы поднимем цены! Закажите настоящий крафтовый квас сейчас. При заказе от 10 баррелей — скидка 10%.</p>
+            <form class="feedback-form" name="order-form" method="POST" action="#">
+              <div class="feedback-form-group"> 
+                <label for="name">Представтесь:</label>
+                <input id="name" type="text" name="name" placeholder="Как мы можем к вам обращаться?">
+              </div>
+              <div class="feedback-form-group form-phone">
+                <div class="feedback-form-group">
+                  <label for="phone">Номер телефона:</label>
+                  <input id="phone" type="tel" name="phone">
+                </div>
+                <div class="feedback-form-group">
+                  <label for="phone2">Доп. номер:</label>
+                  <input id="phone2" type="tel" name="phone2">
+                </div>
               </div>
               <div class="feedback-form-group">
-                <label for="phone2">Доп. номер:</label>
-                <input id="phone2" type="tel" name="phone2">
+                <label for="email">Email:</label>
+                <input id="email" type="email" name="email">
               </div>
-            </div>
-            <div class="feedback-form-group">
-              <label for="email">Email:</label>
-              <input id="email" type="email" name="email">
-            </div>
-            <div class="feedback-form-group">
-              Объем заказа:
-              <select name="order-quantity[]">
-                <option value="1">От 5 до 10 баррелей в неделю</option>
-                <option value="2">Пункт 2</option>
-              </select>
-            </div>
-            <div class="feedback-form-group">
-                <label>Доп. комментарий:</label>
-                <textarea id="comment" rows="10" cols="96" name="comment"></textarea>
-            </div>
-            <div class="feedback-form-group">
+              <div class="feedback-form-group">
+                Объем заказа:
+                <select name="order-quantity[]">
+                  <option value="1">От 5 до 10 баррелей в неделю</option>
+                  <option value="2">Пункт 2</option>
+                </select>
+              </div>
+              <div class="feedback-form-group">
+                  <label>Доп. комментарий:</label>
+                  <textarea id="comment" rows="10" cols="96" name="comment"></textarea>
+              </div>
+              <div class="feedback-form-group">
 
-            </div>
-            <div class="feedback-form-group">
-              <label>
-                <input type="checkbox" name="assent">
-                Я согласен получать квасную рассылку
-              </label>
-            </div>
-            <div>
-              <input type="submit" value="Отправить заказ">
-            </div>
-          </form>
+              </div>
+              <div class="feedback-form-group">
+                <label>
+                  <input type="checkbox" name="assent">
+                  Я согласен получать квасную рассылку
+                </label>
+              </div>
+              <div>
+                <input class="btn btn-brown" type="submit" value="Отправить заказ">
+              </div>
+            </form>
+          </div>
         </div>
       </section>
     </main>

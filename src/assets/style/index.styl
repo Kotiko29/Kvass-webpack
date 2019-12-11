@@ -6,6 +6,7 @@
 @import './category'
 @import './sidebar'
 @import './post'
+@import './btns'
 
 *
   box-sizing border-box
@@ -37,10 +38,13 @@ img
 .wrapper
   flex 1 0 auto
 
+//.container
+  // ОПИСАТЬ ТУТ СТИЛИ ДЛЯ КОНТЕЙНЕРА
+
  .new-and-price 
     margin-top 5px
     background-color white
-    .container
+    .container // ВЫПИЛИТЬ И СДЕЛАТЬ ОДИН ОБЩИЙ
       width 1160px
       max-width 100%
       margin 0 auto
@@ -90,29 +94,13 @@ img
                 caption-side bottom
                 text-align left
                 color rgb(82, 75, 75);
-        .btn 
-          display inline-block
-          padding 16px 40px
-          margin-right 20px
-          
-          font-size 16px
-          font-weight bold
-          text-align center
-          text-transform uppercase
-          vertical-align middle
-          text-decoration none
-          color #804325
-          border 3px solid #804325
-        .btn-brown
-          color white
-          background-color #804325
    /*--------------------------------------------------------------------*/       
   .features
     display flex
     margin-top 50px
     background-color #ffcb78
 
-    .container
+    .container // ВЫПИЛИТЬ И СДЕЛАТЬ ОДИН ОБЩИЙ
       max-width 100%
       margin 0 auto
       @media (max-width: 940px)
@@ -160,7 +148,7 @@ img
     padding-top 70px
     padding-bottom 60px
     background-color white
-    .container
+    .container // ВЫПИЛИТЬ И СДЕЛАТЬ ОДИН ОБЩИЙ
       width 1160px
       max-width 100%
       margin 0 auto
@@ -212,7 +200,7 @@ img
     padding-left 50px
     padding-right 50px
     background-color #ede5d8
-    .container
+    .container // ВЫПИЛИТЬ И СДЕЛАТЬ ОДИН ОБЩИЙ
       width 1160px
       max-width 100%
       margin 0 auto
@@ -262,7 +250,7 @@ img
   .product-and-price
     padding-top 50px
     padding-bottom 100px
-    .container
+    .container // ВЫПИЛИТЬ И СДЕЛАТЬ ОДИН ОБЩИЙ
       width 1160px
       max-width 100%
       margin 0 auto
@@ -295,37 +283,60 @@ img
     padding-bottom 70px
     background-color #ffcb78
     color black
-    .container
+    .container // ВЫПИЛИТЬ И СДЕЛАТЬ ОДИН ОБЩИЙ
       width 1160px
       max-width 100%
       margin 0 auto
       @media (max-width: 940px)
         padding-right 10px
         padding-left 10px
-      p   
-        padding-top 50px
-        padding-right 150px
-        padding-bottom 50px
-      .feedback-form
-        font-size 16px
-        line-height 30px
-        text-transform uppercase
-        font-weight bold
-        .feedback-form-group
-          display flex
-          align-items center
-          justify-content space-between
-          margin-bottom 20px
-          .feedback-form-group-phone
+      .form-container
+        width 850px
+        p   
+          padding-top 50px
+          padding-right 150px
+          padding-bottom 50px
+        .feedback-form
+          font-size 16px
+          line-height 30px
+          text-transform uppercase
+          font-weight bold
+          .feedback-form-group
+            // display flex
+            // align-items center
+            // justify-content space-between
+            margin-bottom 20px
+            label
+              display block
+            input
+              display block
+              width 100%
+              border none
+              outline none
+              padding 10px
+              background rgba(0, 0, 0, 0.2)
+            textarea
+              background rgba(0, 0, 0, 0.2)
+              width 100%
+              border none 
+              outline none
+            // .feedback-form-group-phone
+            //   display flex
+            //   flex-basis 50%
+            //   align-items center
+            //   justify-content space-between
+          .form-phone
             display flex
-            flex-basis 50%
-            align-items center
+            flex-wrap wrap
             justify-content space-between
+            .feedback-form-group
+              width 47%
+              margin-bottom 0
   footer
     flex 0 0 auto
     background-color black
     padding 80px
-    .container
+    .container // ВЫПИЛИТЬ И СДЕЛАТЬ ОДИН ОБЩИЙ
       width 1160px
       max-width 100%
       margin 0 auto
