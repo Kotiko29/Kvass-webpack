@@ -5,78 +5,67 @@
   background-repeat no-repeat
   background-size 100%
   padding-top 60px
-  @media (max-width: 940px)
-    width 640px // не совсем правильное решение
-    height 400px
-  .container
-    width 1160px
-    max-width 100%
-    margin 0 auto
-    @media (max-width: 940px)
-      width 640px
-      padding-right 10px
-      padding-left 10px
-    .main-header-navigation
+  .main-header-navigation
+    display flex
+    justify-content space-around 
+    align-content flex-start
+    padding-left 10px
+    padding-right 10px
+    .header-logo img
+      margin-right 50px
+    .main-nav
       display flex
-      justify-content center 
-      align-content flex-start
-      padding-left 10px
-      padding-right 10px
-      .header-logo img
-        margin-right 180px
-      .main-nav
-        display flex
-        justify-content space-between
-        list-style none 
-        text-transform uppercase
-        padding-left 0
-        padding-right 0
-        padding-top 10px
-        padding-bottom 10px
-        border-top 1px solid rgba(255, 203, 120,0.3)
-        border-bottom 1px solid rgba(255, 203, 120,0.3)
-        @media (max-width: 940px)
-          flex-direction column
-          border none
-        li
-          margin-right 20px
-          &:last-child
-            margin-right 0
-          a
-            text-decoration none
-            color white
-            font-weight bold
-            &:hover
-              color #e6b48e 
-            &:active
-              color rgba(255, 255, 255, 0.3)
-    #slides
-      position relative
-      height auto
+      justify-content space-between
+      list-style none 
+      text-transform uppercase
+      padding-left 0
+      padding-right 0
+      padding-top 10px
+      padding-bottom 10px
+      border-top 1px solid rgba(255, 203, 120,0.3)
+      border-bottom 1px solid rgba(255, 203, 120,0.3)
+      @media (max-width: 760px)
+        flex-direction column
+        border none
+      li
+        margin-right 20px
+        &:last-child
+          margin-right 0
+        a
+          text-decoration none
+          color white
+          font-weight bold
+          &:hover
+            color #e6b48e 
+          &:active
+            color rgba(255, 255, 255, 0.3)
+  #slides
+    position relative
+    height auto
+    width 100%
+    list-style-type none
+    color white
+    font-size 72px
+    font-weight bold
+    line-height 72px
+    text-align center
+    @media (max-width: 940px)
+      font-size 36px
+      line-height 36px
+    @media (max-width: 570px)
+      display none
+    .slide
+      position absolute
+      left 0
+      top 0
       width 100%
-      list-style-type none
-      color white
-      font-size 72px
-      font-weight bold
-      line-height 72px
-      text-align center
-      @media (max-width: 940px)
-        font-size 36px
-        line-height 36px
-      @media (max-width: 570px)
-        display none
-      .slide
-        position absolute
-        left 0
-        top 0
-        width 100%
-        height 100%
-        opacity 0
-        z-index 1
-        box-sizing border-box
-      .showing
-        opacity 1
-        z-index 2
+      height 100%
+      opacity 0
+      z-index 1
+      box-sizing border-box
+    .showing
+      opacity 1
+      z-index 2
 
 
 
