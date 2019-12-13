@@ -2,7 +2,6 @@
 @import './fonts'
 @import './icons'
 @import './header'
-@import './footer'
 @import './category'
 @import './sidebar'
 @import './post'
@@ -28,6 +27,9 @@ body
   font-size 40px
   line-height 47px
   text-transform uppercase
+  @media (max-width: 1160px)
+    font-size 36px
+    line-height 36px
   @media(max-width: 760px)
     text-align center
     font-size 32px
@@ -52,9 +54,6 @@ img
     padding-left 10px
   @media (max-width: 760px)
     width:100%;
-    padding-right 10px
-    padding-left 10px
-
  .new-and-price 
     margin-top 5px
     background-color white
@@ -105,42 +104,45 @@ img
     display flex
     margin-top 50px
     background-color #ffcb78
-    .features-list
-      display flex
-      list-style none
-      justify-content space-around
-      h2 
-        font-size 16px
-        line-height 23px
-        font-weight bold
-        font-family "Arial", sans-serif
-        text-transform uppercase
-        text-decoration none
-        color black
-      .feature-item
-        width 30%
-        padding-right 60px
-        padding-left 50px
-        padding-top 80px
-        padding-bottom 50px
-        border-right 1px solid rgba(0, 50, 50, 0.1)
-        &:last-child
-          border none 
-      .feature-cook
-        background-image url(../img/pic1.svg)
-        background-position 30px 10px
-        background-size 80px 80px
-        background-repeat no-repeat
-      .feature-native
-        background-image url(../img/pic2.svg)
-        background-position 35px 0
-        background-size 80px 80px
-        background-repeat no-repeat
-      .feature-quality
-        background-image url(../img/pic3.svg)
-        background-position 50px 0
-        background-size 80px 80px
-        background-repeat no-repeat
+    .container
+      width 1650px
+      margin 0 auto
+      .features-list
+        display flex
+        list-style none
+        justify-content space-around
+        h2 
+          font-size 16px
+          line-height 23px
+          font-weight bold
+          font-family "Arial", sans-serif
+          text-transform uppercase
+          text-decoration none
+          color black
+        .feature-item
+          width 30%
+          padding-right 60px
+          padding-left 50px
+          padding-top 80px
+          padding-bottom 50px
+          border-right 1px solid rgba(0, 50, 50, 0.1)
+          &:last-child
+            border none 
+        .feature-cook
+          background-image url(../img/pic1.svg)
+          background-position 30px 10px
+          background-size 80px 80px
+          background-repeat no-repeat
+        .feature-native
+          background-image url(../img/pic2.svg)
+          background-position 35px 0
+          background-size 80px 80px
+          background-repeat no-repeat
+        .feature-quality
+          background-image url(../img/pic3.svg)
+          background-position 50px 0
+          background-size 80px 80px
+          background-repeat no-repeat
         /*-------------------------history-------------------------------------------*/  
   .history
     padding-top 70px
