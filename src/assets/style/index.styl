@@ -269,15 +269,13 @@ img
         padding-top 50px
         padding-right 150px
         padding-bottom 50px
+        
       .feedback-form
         font-size 16px
         line-height 30px
         text-transform uppercase
         font-weight bold
         .feedback-form-group
-          // display flex
-          // align-items center
-          // justify-content space-between
           margin-bottom 20px
           label
             display block
@@ -288,6 +286,42 @@ img
             outline none
             padding 10px
             background rgba(0, 0, 0, 0.2)
+          select
+            -webkit-appearance none
+            -moz-appearance none
+            -ms-appearance none
+            appearance none
+            outline 0
+            box-shadow none
+            border 0!important
+            background rgba(0, 0, 0, 0.2)
+            display block
+            width 100%
+            position relative
+            padding 10px
+            overflow hidden
+            cursor pointer
+            &::before 
+              content ""
+              position absolute
+              top 10px
+              left -100px
+              width 50px
+              height 50px
+              background-image url(../img/spritesheet.png)
+              background-repeat no-repeat
+              background-position -10px -150px
+
+              
+
+              
+
+
+
+
+
+
+
           textarea
             background rgba(0, 0, 0, 0.2)
             width 100%
@@ -305,6 +339,8 @@ img
           .feedback-form-group
             width 47%
             margin-bottom 0
+
+
             /*-------------------------footer-------------------------------------------*/
   footer
     flex 0 0 auto
