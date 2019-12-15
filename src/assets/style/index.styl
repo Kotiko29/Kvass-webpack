@@ -182,10 +182,18 @@ img
         justify-content space-between
         &:first-of-type
           margin-bottom 80px
+        @media (max-width: 1160px)
+          display flex
+        @media (max-width: 760px)
+          display flex
+          flex-direction column
         img 
           width 470px
           margin-left 120px
           border-radius 5px
+          @media (max-width: 760px)
+            width 100%
+            margin 0 auto
         /*-------------------------press-------------------------------------------*/
   .press 
     padding-top 70px
@@ -269,7 +277,7 @@ img
         padding-top 50px
         padding-right 150px
         padding-bottom 50px
-        
+        color rgb(68, 68, 70)
       .feedback-form
         font-size 16px
         line-height 30px
@@ -286,52 +294,63 @@ img
             outline none
             padding 10px
             background rgba(0, 0, 0, 0.2)
-          select
-            -webkit-appearance none
-            -moz-appearance none
-            -ms-appearance none
-            appearance none
-            outline 0
-            box-shadow none
-            border 0!important
-            background rgba(0, 0, 0, 0.2)
+          .select 
+            position relative
             display block
             width 100%
-            position relative
-            padding 10px
             overflow hidden
-            cursor pointer
-            &::before 
-              content ""
+            &::after 
+              content '\25BC'
               position absolute
-              top 10px
-              left -100px
-              width 50px
-              height 50px
-              background-image url(../img/spritesheet.png)
-              background-repeat no-repeat
-              background-position -10px -150px
-
-              
-
-              
-
-
-
-
-
-
-
+              top 12px
+              right 0
+              padding 0 1em
+              cursor pointer
+              pointer-events none
+              color rgb(186,146,85)
+            select
+              -webkit-appearance none
+              -moz-appearance none
+              -ms-appearance none
+              appearance none
+              outline 0
+              box-shadow none
+              border 0!important
+              background rgba(0, 0, 0, 0.2)
+              padding 10px
+              width 100%
+              text-transform uppercase
+              color rgb(186,146,85)
           textarea
             background rgba(0, 0, 0, 0.2)
             width 100%
             border none 
             outline none
-          // .feedback-form-group-phone
-          //   display flex
-          //   flex-basis 50%
-          //   align-items center
-          //   justify-content space-between
+          .checkbox 
+            display none
+          .checkbox-label
+            display inline-block
+            cursor pointer
+            position relative
+            padding-left 40px
+            &:before
+              content ""
+              display inline-block
+              width 30px
+              height 30px
+              position absolute
+              left 0
+              bottom 8px
+              background-color rgba(0, 0, 0, 0.2)
+        
+        /// input[type=checkbox]:checked + label:before {
+        //   content: "\2713";
+        //   text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+        //   font-size: 15px;
+        //   color: #f3f3f3;
+        //   text-align: center;
+        //   line-height: 15px;
+
         .form-phone
           display flex
           flex-wrap wrap
@@ -339,7 +358,6 @@ img
           .feedback-form-group
             width 47%
             margin-bottom 0
-
 
             /*-------------------------footer-------------------------------------------*/
   footer

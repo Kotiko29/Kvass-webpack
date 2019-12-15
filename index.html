@@ -196,7 +196,7 @@
             <form class="feedback-form" name="order-form" method="POST" action="#">
               <div class="feedback-form-group"> 
                 <label for="name">Представтесь:</label>
-                <input id="name" type="text" name="name" placeholder="Как мы можем к вам обращаться?">
+                <input id="name" type="text" name="name">
               </div>
               <div class="feedback-form-group form-phone">
                 <div class="feedback-form-group">
@@ -214,21 +214,21 @@
               </div>
               <div class="feedback-form-group">
                 Объем заказа:
-                <select name="order-quantity[]">
-                  <option value="1">От 5 до 10 баррелей в неделю</option>
-                  <option value="2">Пункт 2</option>
-                </select>
+                <div class="select">
+                  <select name="order-quantity[]">
+                    <option value="1">От 5 до 10 баррелей в неделю</option>
+                    <option value="2">Пункт 2</option>
+                  </select>
+                </div>
               </div>
               <div class="feedback-form-group">
                   <label>Доп. комментарий:</label>
                   <textarea id="comment" rows="10" cols="96" name="comment"></textarea>
               </div>
-              <div class="feedback-form-group">
 
-              </div>
               <div class="feedback-form-group">
-                <label>
-                  <input type="checkbox" name="assent">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="assent" class="checkbox" checked>
                   Я согласен получать квасную рассылку
                 </label>
               </div>
