@@ -341,31 +341,25 @@ img
             width 100%
             border none 
             outline none
-          .checkbox 
+
+          input[type='checkbox'] 
             display none
-          .checkbox-label
-            display inline-block
-            cursor pointer
-            position relative
-            padding-left 40px
-            &:before
-              content ""
+          .checkbox-label 
+            &:before 
+              content ''
               display inline-block
               width 30px
               height 30px
-              position absolute
-              left 0
-              bottom 8px
               background-color rgba(0, 0, 0, 0.2)
-        
-        /// input[type=checkbox]:checked + label:before {
-        //   content: "\2713";
-        //   text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
-        //   font-size: 15px;
-        //   color: #f3f3f3;
-        //   text-align: center;
-        //   line-height: 15px;
-
+              cursor pointer
+              margin-right 10px
+              
+          input[type="checkbox"]:checked
+            & + label
+              &::before
+                content "\2713"
+                
+          
         .form-phone
           display flex
           flex-wrap wrap
