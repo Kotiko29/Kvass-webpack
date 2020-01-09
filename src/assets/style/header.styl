@@ -7,14 +7,30 @@
   padding-top 60px
   @media (max-width: 1160px)
     height 420px
+  @media (max-width: 760px)
+    height 250px
+    padding-top 20px
+  .menu-trigger 
+    display none
+    width 50px
+    height 5px
+    margin-left 20px
+    background-color white
+    box-shadow 0 14px 0 0 white, 0 28px 0 0 white
+    cursor pointer 
+    @media (max-width: 760px)
+      display inline-block
   .main-header-navigation
     display flex
     justify-content space-between 
     align-content flex-start
     padding-left 10px
     padding-right 10px
+    @media (max-width: 760px)
+      display none
     .header-logo
       margin-right 50px
+      padding-top 20px
     .main-nav
       display flex
       justify-content space-between
@@ -29,6 +45,7 @@
       @media (max-width: 760px)
         flex-direction column
         border none
+        padding-top 0 
       li
         margin-right 30px
         &:last-child

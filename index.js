@@ -10,3 +10,10 @@ function nextSlide() {
     slides[currentSlide].className = 'slide showing';
 }
 */
+$(document).ready(function(){
+    $('.menu-trigger').click(function(){
+        $('.main-header-navigation').slideToggle(500);
+    });
+   
+
+});

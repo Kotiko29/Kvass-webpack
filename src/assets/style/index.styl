@@ -78,14 +78,15 @@ img
         @media (max-width: 760px)
           display flex
           flex-direction column
+          width auto
           margin 0 auto
+          padding-left 10px
+          padding-right 10px
           border none
         .block-item
           display flex
           flex-direction row-reverse
           justify-content flex-end
-          img 
-            max-width 350px
           @media (max-width: 1160px)
             flex-direction column
           table, td
@@ -123,6 +124,7 @@ img
         justify-content space-around
         @media (max-width: 760px)
           flex-direction column
+          padding-left 10px
         h2 
           font-size 16px
           line-height 23px
@@ -142,6 +144,9 @@ img
             border none 
           @media (max-width: 760px)
             width 100%
+            padding-left 0
+            padding-right 0
+            border none
         .feature-cook
           background-image url(../img/pic1.svg)
           background-position 30px 10px
@@ -169,6 +174,7 @@ img
         display flex
         align-items flex-start
         justify-content space-between
+        flex-wrap wrap
         margin-top 0
         margin-bottom 20px
         font-size 24px
@@ -256,6 +262,7 @@ img
       font-style none 
       /*-------------------------product-and-price-------------------------------------------*/
   .product-and-price
+    display none
     padding-top 50px
     padding-bottom 100px
     .price-list
@@ -278,6 +285,7 @@ img
           color white
           background-color black
           border-radius 3px
+
             /*-------------------------feedback-------------------------------------------*/
 
   .feedback
@@ -373,6 +381,7 @@ img
 
             /*-------------------------footer-------------------------------------------*/
   footer
+    display none
     flex 0 0 auto
     background-color black
     padding-top 50px
