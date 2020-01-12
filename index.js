@@ -1,19 +1,22 @@
+/*jshint esversion: 6 */
 import style from './src/assets/style/index.styl'; // импорт стилей
+// Помещаем переменные в классы, которые будут использоваться
+let menuOpen = document.querySelector(`.menu-open`),
+    mainHeaderNavigation = document.querySelector(`.main-header-navigation`),
+    menuClose = document.querySelector(`.menu-close`);
 
-/*var slides = document.querySelectorAll('#slides .slide');
-var currentSlide = 0;
-var slideInterval = setInterval(nextSlide,2000);
- 
-function nextSlide() {
-    slides[currentSlide].className = 'slide';
-    currentSlide = (currentSlide+1)%slides.length;
-    slides[currentSlide].className = 'slide showing';
-}
-*/
-$(document).ready(function(){
-    $('.menu-trigger').click(function(){
-        $('.main-header-navigation').slideToggle(500);
-    });
-   
+//Определяем поведение меню при клике на кнопку "гамбургер"
+menuOpen.addEventListener(`click`, function() { // При клике на кнопку меню сработает функция
+    mainHeaderNavigation.style.display = `flex`; // у класса .main-header-navigation меняем 'display none' на 'display flex'
+    menuOpen.style.display = `none`; // скрываем иконку "гамбургер"
+    menuClose.style.display = `block`; // Отображаем кнопку закрытия меню
 
 });
+//Определяем поведение меню при клике на кнопку "закрыть"
+menuClose.addEventListener(`click`, function() {  // При клике на кнопку "Х" сработает функция
+    mainHeaderNavigation.style.display = `none`; // у класса .main-header-navigation меняем 'display flex' на 'display none'
+    menuClose.style.display = `none`; // скрываем кнопку "X"
+    menuOpen.style.display = `block`; // Отображаем иконку "гамбургер"
+    
+});
+
