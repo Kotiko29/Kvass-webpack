@@ -277,30 +277,50 @@ body
         
       /*-------------------------product-and-price-------------------------------------------*/
   .product-and-price
-    display none
+    display block
     padding-top 50px
     padding-bottom 100px
     .price-list
       width 100%
       border-collapse collapse
+      @media (max-width: 760px)
+        width 80%
+        margin 0 auto
+      // tr 
+      //   display block  
+      td,th
+        border-bottom 1px solid #aba6a6
+        padding 20px 10px
+        text-transform uppercase
+        @media (max-width: 760px)
+          display flex
+          justify-content space-between
+          font-size 14px
+          &:before
+            content attr(data-label)
+            font-weight bold
+            margin-right 20px
+      
       th 
         font-weight normal
         text-align left
         text-transform uppercase
         color #aba6a6
-      td,th
-        border-bottom 1px solid #aba6a6
-        padding 20px 10px
-        text-transform uppercase
+        @media (max-width: 760px)
+          display none //Скроем названия в шапке таблицы
       .price-name
         font-weight bold
+        @media (max-width: 760px)
+          display block
+          text-align center
+          background-color #eee
         sup
           margin-left 20px
           padding 3px
           color white
           background-color black
           border-radius 3px
-
+        
             /*-------------------------feedback-------------------------------------------*/
 
   .feedback
