@@ -20,3 +20,14 @@ menuClose.addEventListener(`click`, function() {  // При клике на кн
     
 });
 
+let productButton = document.querySelector('.product-button'),
+    tablePriceList = document.querySelector('.price-list');
+
+productButton.onclick = function() {
+    console.log('Кнопка нажата!');
+    if (tablePriceList.style.display === `table`) {
+        tablePriceList.style.display = `none`;
+    } else {
+        tablePriceList.style.display = `table`;
+    }
+};

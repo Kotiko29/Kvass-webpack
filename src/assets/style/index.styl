@@ -280,14 +280,17 @@ body
     display block
     padding-top 50px
     padding-bottom 100px
+    @media (max-width: 760px)
+      padding-top 20px
+      padding-bottom 30px
+    .section-title
+      @media (max-width: 760px)
+        cursor pointer
     .price-list
       width 100%
       border-collapse collapse
       @media (max-width: 760px)
-        width 80%
-        margin 0 auto
-      // tr 
-      //   display block  
+        display none
       td,th
         border-bottom 1px solid #aba6a6
         padding 20px 10px
@@ -300,7 +303,8 @@ body
             content attr(data-label)
             font-weight bold
             margin-right 20px
-      
+          &:last-child
+            border-bottom none
       th 
         font-weight normal
         text-align left
@@ -320,9 +324,7 @@ body
           color white
           background-color black
           border-radius 3px
-        
-            /*-------------------------feedback-------------------------------------------*/
-
+                /*-------------------------feedback-------------------------------------------*/
   .feedback
     padding-top 50px
     padding-bottom 70px
