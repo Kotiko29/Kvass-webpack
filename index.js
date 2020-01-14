@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 import style from './src/assets/style/index.styl'; // импорт стилей
-// Помещаем переменные в классы, которые будут использоваться
+// Помещаем в переменные классы, которые будут использоваться
 let menuOpen = document.querySelector(`.menu-open`),
     mainHeaderNavigation = document.querySelector(`.main-header-navigation`),
     menuClose = document.querySelector(`.menu-close`);
@@ -19,4 +19,15 @@ menuClose.addEventListener(`click`, function() {  // При клике на кн
     menuOpen.style.display = `block`; // Отображаем иконку "гамбургер"
     
 });
+// Скрываем и показываем таблицу
+let productButton = document.querySelector('.product-button'),
+    tablePriceList = document.querySelector('.price-list');
+// Вызываем функцию → при нажатии на элемент с классом "product-button" будет скрываться или отображаться таблица
+productButton.onclick = function() {
+    if (tablePriceList.style.display === `table`) {// если таблица отображается
+        tablePriceList.style.display = `none`;// то при клике скрываем
+    } else {
+        tablePriceList.style.display = `table`;// иначе показываем
+    }
+};
 
