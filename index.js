@@ -19,9 +19,13 @@ menuClose.addEventListener(`click`, function() {  // При клике на кн
     menuOpen.style.display = `block`; // Отображаем иконку "гамбургер"
     
 });
+
+
 // Скрываем и показываем таблицу
 let productButton = document.querySelector('.product-button'),
     tablePriceList = document.querySelector('.price-list');
+
+
 // Вызываем функцию → при нажатии на элемент с классом "product-button" будет скрываться или отображаться таблица
 productButton.onclick = function() {
     if (tablePriceList.style.display === `table`) {// если таблица отображается
@@ -32,5 +36,21 @@ productButton.onclick = function() {
 };
 
 // Form
+let formSend = document.querySelector('#form-send');
+let form  = document.getElementsByTagName('form')[0];
+let input = document.querySelector('input');
+let result = document.querySelector('.modal');
+let errors = document.querySelector('.modal');
 
+form.addEventListener('submit', function (evt) {
+    evt.preventDefault();  
+    console.log('Форма не отправилась');
+  });
 
+  formSend.addEventListener('click', function() {
+    if(input.value === "") {
+      console.log("Заполните пустое поле.");
+    } else {
+        result.style.display = `block`;
+    }
+  }, false);
