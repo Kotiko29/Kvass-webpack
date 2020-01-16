@@ -35,28 +35,30 @@ menuClose.addEventListener(`click`, function() {  // При клике на кн
 // Скрываем строки таблицы при нажатии
 let tr = document.querySelectorAll('.price-list tr'); // добавляем в переменную псевдомассив со строками таблицы
 for (let i = 0; i < tr.length; i++) { // в цикле перебираем массив tr 
-    console.log(tr[i]);
     tr[i].onclick = function() { // при клике на строку вызывается функция, которая добавляет стиль строке
-        tr[i].style.display = 'none';
+    tr[i].style.display = 'none';
     };
 }
 
 // Form
 let formSend = document.querySelector('#form-send');
 let form  = document.getElementsByTagName('form')[0];
-let input = document.querySelector('input');
-let result = document.querySelector('.modal');
-let errors = document.querySelector('.modal');
+let formItem = document.querySelectorAll('form input[required]');
 
 form.addEventListener('submit', function (evt) {
     evt.preventDefault();  
     console.log('Форма не отправилась');
   });
 
-  formSend.addEventListener('click', function() {
-    if(input.value === "") {
-      console.log("Заполните пустое поле.");
-    } else {
-        result.style.display = `block`;
-    }
-  }, false);
+
+for (let i = 0; i < formItem.length; i++) {
+    console.log(formItem[i]);
+    formSend.onclick = function() {
+        if (formItem[i].value === '') {
+            console.log (55);
+        } else {
+            console.log(99);
+        }
+    };
+    
+}

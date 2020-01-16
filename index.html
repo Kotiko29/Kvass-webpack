@@ -205,26 +205,26 @@
             <form class="feedback-form" name="order-form" method="POST" action="#">
               <div class="feedback-form-group"> 
                 <label for="name">Представтесь:</label>
-                <input id="name" type="text" name="name">
+                <input id="name" type="text" name="name" required>
               </div>
               <div class="feedback-form-group form-phone">
                 <div class="feedback-form-group">
                   <label for="phone">Номер телефона:</label>
-                  <input id="phone" type="tel" name="phone">
+                  <input id="phone" type="tel" name="phone" required>
                 </div>
                 <div class="feedback-form-group">
                   <label for="phone2">Доп. номер:</label>
-                  <input id="phone2" type="tel" name="phone2">
+                  <input id="phone2" type="tel" name="phone2" required>
                 </div>
               </div>
               <div class="feedback-form-group">
                 <label for="email">Email:</label>
-                <input id="email" type="email" name="email">
+                <input id="email" type="email" name="email" required>
               </div>
               <div class="feedback-form-group">
                 Объем заказа:
                 <div class="select">
-                  <select name="order-quantity[]">
+                  <select name="order-quantity[]" required>
                     <option value="1">От 5 до 10 баррелей в неделю</option>
                     <option value="2">Пункт 2</option>
                   </select>
@@ -232,11 +232,11 @@
               </div>
               <div class="feedback-form-group">
                 <label>Доп. комментарий:</label>
-                <textarea id="comment" rows="10" cols="96" name="comment"></textarea>
+                <textarea id="comment" rows="10" cols="96" name="comment" required></textarea>
               </div>
 
               <div class="feedback-form-group">
-                <input type="checkbox" name="assent" class="checkbox" id="assent" checked>
+                <input type="checkbox" name="assent" class="checkbox" id="assent" checked required>
                 <label class="checkbox-label" for="assent">                  
                   Я согласен получать квасную рассылку
                 </label>
