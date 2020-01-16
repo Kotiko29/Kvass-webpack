@@ -10,14 +10,22 @@
   @media (max-width: 760px)
     height 215px
     padding-top 20px
-  .menu-open 
-    @media (max-width: 760px)
-      display inline-block
-      width 45px
-      height 5px
-      margin-left 20px
+  .hamb
+    display block 
+    @media (max-width: 768px)
+      display block
+      position absolute
+      width 30px
+      height 20px
+      right 30px
+      top 20px
+      cursor pointer
+    .namb-line
+      display block
+      width 30px
+      height 3px
       background-color white
-      box-shadow 0 14px 0 0 white, 0 28px 0 0 white
+      margin-bottom 6px
       cursor pointer
   .main-header-navigation
     display flex

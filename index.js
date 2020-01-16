@@ -22,18 +22,24 @@ menuClose.addEventListener(`click`, function() {  // При клике на кн
 
 
 // Скрываем и показываем таблицу
-let productButton = document.querySelector('.product-button'),
-    tablePriceList = document.querySelector('.price-list');
-
-
-// Вызываем функцию → при нажатии на элемент с классом "product-button" будет скрываться или отображаться таблица
-productButton.onclick = function() {
-    if (tablePriceList.style.display === `table`) {// если таблица отображается
-        tablePriceList.style.display = `none`;// то при клике скрываем
-    } else {
-        tablePriceList.style.display = `table`;// иначе показываем
-    }
-};
+// let productButton = document.querySelector('.product-button'),
+//     tablePriceList = document.querySelector('.price-list');
+// Вызываем функцию → при нажатии на элемент с классом "product-button" (заголовок раздела) будет скрываться или отображаться таблица
+// productButton.onclick = function() {
+//     if (tablePriceList.style.display === `table`) {// если таблица отображается
+//         tablePriceList.style.display = `none`;// то при клике скрываем
+//     } else {
+//         tablePriceList.style.display = `table`;// иначе показываем
+//     }
+// };
+// Скрываем строки таблицы при нажатии
+let tr = document.querySelectorAll('.price-list tr'); // добавляем в переменную псевдомассив со строками таблицы
+for (let i = 0; i < tr.length; i++) { // в цикле перебираем массив tr 
+    console.log(tr[i]);
+    tr[i].onclick = function() { // при клике на строку вызывается функция, которая добавляет стиль строке
+        tr[i].style.display = 'none';
+    };
+}
 
 // Form
 let formSend = document.querySelector('#form-send');
