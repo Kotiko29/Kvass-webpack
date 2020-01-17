@@ -1,14 +1,14 @@
 /*jshint esversion: 6 */
 import style from './src/assets/style/index.styl'; // импорт стилей
 // Помещаем в переменные классы, которые будут использоваться
-let menuOpen = document.querySelector(`.menu-open`),
+let hamb = document.querySelector(`.hamb`),
     mainHeaderNavigation = document.querySelector(`.main-header-navigation`),
     menuClose = document.querySelector(`.menu-close`);
 
 //Определяем поведение меню при клике на кнопку "гамбургер"
-menuOpen.addEventListener(`click`, function() { // При клике на кнопку меню сработает функция
+hamb.addEventListener(`click`, function() { // При клике на кнопку меню сработает функция
     mainHeaderNavigation.style.display = `flex`; // у класса .main-header-navigation меняем 'display none' на 'display flex'
-    menuOpen.style.display = `none`; // скрываем иконку "гамбургер"
+    hamb.style.display = `none`; // скрываем иконку "гамбургер"
     menuClose.style.display = `block`; // Отображаем кнопку закрытия меню
 
 });
@@ -16,7 +16,7 @@ menuOpen.addEventListener(`click`, function() { // При клике на кно
 menuClose.addEventListener(`click`, function() {  // При клике на кнопку "Х" сработает функция
     mainHeaderNavigation.style.display = `none`; // у класса .main-header-navigation меняем 'display flex' на 'display none'
     menuClose.style.display = `none`; // скрываем кнопку "X"
-    menuOpen.style.display = `block`; // Отображаем иконку "гамбургер"
+    hamb.style.display = `block`; // Отображаем иконку "гамбургер"
     
 });
 
@@ -54,10 +54,13 @@ form.addEventListener('submit', function (evt) {
 for (let i = 0; i < formItem.length; i++) {
     console.log(formItem[i]);
     formSend.onclick = function() {
-        if (formItem[i].value === '') {
-            console.log (55);
+        
+        if (formItem[i].value == '') {
+            console.log (formItem[i]);
+            formItem[i].style.backgroundColor = 'blue';
         } else {
-            console.log(99);
+            console.log (55);
+            formItem[i].style.border = '2px solid green';
         }
     };
     

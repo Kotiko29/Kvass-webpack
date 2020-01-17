@@ -30,7 +30,7 @@ body
   @media (max-width: 1160px)
     font-size 36px
     line-height 36px
-  @media(max-width: 760px)
+  @media(max-width: 768px)
     text-align center
     font-size 24px
     line-height 24px
@@ -39,17 +39,17 @@ body
 
 //.container
   // ОПИСАТЬ ТУТ СТИЛИ ДЛЯ КОНТЕЙНЕРА
-// media < 1160px ->  width 760px
-// media < 760px -> width 100%
+// media < 1160px ->  width 768px
+// media < 768px -> width 100%
 .container // ВЫПИЛИТЬ И СДЕЛАТЬ ОДИН ОБЩИЙ
   width 1160px
   max-width 100%
   margin 0 auto
   @media (max-width: 1160px)
-    width:760px;
+    width:768px;
     padding-right 10px
     padding-left 10px
-  @media (max-width: 760px)
+  @media (max-width: 768px)
     width:100%;
  .new-and-price 
     margin-top 5px
@@ -57,12 +57,12 @@ body
     h3 
       font-size 32px
       text-transform uppercase
-      @media(max-width: 760px)
+      @media(max-width: 768px)
        font-size 24px 
     .new-items
       display flex
       justify-content space-between
-      @media(max-width: 760px)
+      @media(max-width: 768px)
         display flex
         flex-direction column
       .new-item
@@ -73,7 +73,7 @@ body
         border-right 1px solid rgba(0, 50, 50, 0.1)
         &:first-child
           border-right none
-        @media (max-width: 760px)
+        @media (max-width: 768px)
           display flex
           flex-direction column
           width auto
@@ -124,7 +124,7 @@ body
         display flex
         list-style none
         justify-content space-around
-        @media (max-width: 760px)
+        @media (max-width: 768px)
           flex-direction column
           padding-left 10px
         h2 
@@ -144,7 +144,7 @@ body
           border-right 1px solid rgba(0, 50, 50, 0.1)
           &:last-child
             border none 
-          @media (max-width: 760px)
+          @media (max-width: 768px)
             width 100%
             padding-left 0
             padding-right 0
@@ -169,7 +169,7 @@ body
     padding-top 70px
     padding-bottom 60px
     background-color white
-    @media (max-width: 760px)
+    @media (max-width: 768px)
       padding-top 30px
     .history-list  
       display flex
@@ -189,7 +189,7 @@ body
           font-size 32px
           line-height 27px
           font-weight bold
-          @media (max-width: 760px)
+          @media (max-width: 768px)
            font-size 20px 
         .history-source  
           font-size 16px
@@ -210,14 +210,14 @@ body
           margin-bottom 80px
         @media (max-width: 1160px)
           display flex
-        @media (max-width: 760px)
+        @media (max-width: 768px)
           display flex
           flex-direction column
         img 
           width 470px
           margin-left 120px
           border-radius 5px
-          @media (max-width: 760px)
+          @media (max-width: 768px)
             width 100%
             margin 0 auto
         /*-------------------------press-------------------------------------------*/
@@ -227,7 +227,7 @@ body
     padding-left 50px
     padding-right 50px
     background-color #ede5d8
-    @media (max-width: 760px)
+    @media (max-width: 768px)
       padding-left 10px
       padding-right 10px
     .press-review
@@ -251,7 +251,7 @@ body
           background-image url(../img/spritesheet.png)
           background-repeat no-repeat
           background-position -10px -150px
-        @media (max-width: 760px)
+        @media (max-width: 768px)
           margin-bottom 20px
           margin-top:10px
           padding-right 0
@@ -262,7 +262,7 @@ body
       align-items center
       justify-content space-between
       width 100%
-      @media (max-width: 760px)
+      @media (max-width: 768px)
         flex-direction column-reverse
         align-items flex-end
       .press-author
@@ -270,7 +270,7 @@ body
         font-weight bold
         text-transform uppercase
         font-style none
-        @media (max-width: 760px)
+        @media (max-width: 768px)
           font-size 14px
           text-align right
            
@@ -280,22 +280,22 @@ body
     display block
     padding-top 50px
     padding-bottom 100px
-    @media (max-width: 760px)
+    @media (max-width: 768px)
       padding-top 20px
       padding-bottom 30px
     .section-title
-      @media (max-width: 760px)
+      @media (max-width: 768px)
         cursor pointer
     .price-list
       width 100%
       border-collapse collapse
-      @media (max-width: 760px)
+      @media (max-width: 768px)
         display table
       td,th
         border-bottom 1px solid #aba6a6
         padding 20px 10px
         text-transform uppercase
-        @media (max-width: 760px)
+        @media (max-width: 768px)
           display flex
           justify-content space-between
           font-size 14px
@@ -310,11 +310,11 @@ body
         text-align left
         text-transform uppercase
         color #aba6a6
-        @media (max-width: 760px)
+        @media (max-width: 768px)
           display none //Скроем названия в шапке таблицы
       .price-name
         font-weight bold
-        @media (max-width: 760px)
+        @media (max-width: 768px)
           display block
           text-align center
           background-color #eee
@@ -339,7 +339,7 @@ body
         padding-right 150px
         padding-bottom 50px
         color rgb(68, 68, 70)
-        @media (max-width: 760px)
+        @media (max-width: 768px)
           padding-right 0
           padding-top 20px
           padding-bottom 20px
@@ -421,7 +421,7 @@ body
           .feedback-form-group
             width 47%
             margin-bottom 0
-            @media (max-width: 760px)
+            @media (max-width: 768px)
               width 100%
 
             /*-------------------------footer-------------------------------------------*/
@@ -435,11 +435,11 @@ body
       justify-content space-between
       margin-left 30px
       margin-right 30px
-      @media (max-width: 760px)
+      @media (max-width: 768px)
         display block
       .footer-logo 
         margin-right 50px
-        @media (max-width: 760px)
+        @media (max-width: 768px)
           margin-right 0
           text-align center
       .main-nav-list
@@ -457,7 +457,7 @@ body
           font-size 12px
           line-height 36px
           align-items center
-        @media (max-width: 760px)
+        @media (max-width: 768px)
           flex-direction column
           border none
           align-items flex-start
@@ -485,12 +485,12 @@ body
         font-size 24px
         line-height 36px
         margin-top 10px
-      @media (max-width: 760px)
+      @media (max-width: 768px)
         display block
     .social-list
       display flex
       list-style none
-      @media (max-width: 760px)
+      @media (max-width: 768px)
         padding 0
       .social-item
         display inline-block
@@ -522,13 +522,13 @@ body
       @media (max-width: 1160px)
         flex-direction column-reverse
         margin-left 40px
-      @media (max-width: 760px)
+      @media (max-width: 768px)
         margin 0
         width 100%
       p  
         margin-right 100px
         width 300px
-        @media (max-width: 760px)
+        @media (max-width: 768px)
           width auto
           line-height 24px
     .copyright
