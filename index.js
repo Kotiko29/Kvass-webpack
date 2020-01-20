@@ -34,6 +34,7 @@ menuClose.addEventListener(`click`, function() {  // При клике на кн
 // };
 // Скрываем строки таблицы при нажатии
 let tr = document.querySelectorAll('.price-list tr'); // добавляем в переменную псевдомассив со строками таблицы
+let priceList = document.querySelector('.price-list');
 for (let i = 0; i < tr.length; i++) { // в цикле перебираем массив tr 
     tr[i].onclick = function() { // при клике на строку вызывается функция, которая добавляет стиль строке
     tr[i].style.display = 'none';
@@ -41,27 +42,35 @@ for (let i = 0; i < tr.length; i++) { // в цикле перебираем ма
 }
 
 // Form
-let formSend = document.querySelector('#form-send');
-let form  = document.getElementsByTagName('form')[0];
-let formItem = document.querySelectorAll('form input[required]');
-
-form.addEventListener('submit', function (evt) {
-    evt.preventDefault();  
-    console.log('Форма не отправилась');
-  });
-
-
-for (let i = 0; i < formItem.length; i++) {
-    console.log(formItem[i]);
-    formSend.onclick = function() {
-        
-        if (formItem[i].value == '') {
-            console.log (formItem[i]);
-            formItem[i].style.backgroundColor = 'blue';
-        } else {
-            console.log (55);
-            formItem[i].style.border = '2px solid green';
-        }
-    };
+let formSend = document.querySelector('#form-send'), 
+    form  = document.getElementsByTagName('form')[0],
+    // name = document.querySelector('.name'),
+    // phone = document.querySelector('.phone'),
+    // phone2 = document.querySelector('.phone2'),
+    // email = document.querySelector('.email'),
+    // orderQuantity = document.querySelector('.order-quantity'),
+    // comment = document.querySelector('.comment'),
+    // assent = document.querySelector('.assent'),
+    fields = document.querySelectorAll('.field'),
+    feedback = document.querySelector('.feedback'),
+    formModal = document.querySelector('.modal'),
+    formModalClose = document.querySelector('.modal-close');
     
-}
+form.addEventListener('submit', function (event) { // При клике отправке формы
+
+    event.preventDefault();  // отменяем переход на новый URL
+
+    for (let i = 0; i < fields.length; i++) { // в цикле перебираем элементы формы
+        if (!fields[i].value) { // если получаем false
+            console.log('Поле не заполнено', fields[i]);
+            fields[i].classList.add('error');  // добавляем элементу класс error
+        } else {  // иначе показываем окно с сообщением "Отправлено" 
+            feedback.style.display = 'none';
+            formModal.style.display = 'block';
+        }
+    }
+    formModalClose.addEventListener(`click`, function() { // При клике на кнопку  сработает функция
+        formModal.style.display = `none`; // скрываем иконку окно
+    });  
+});
+

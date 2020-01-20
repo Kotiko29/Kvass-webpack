@@ -391,6 +391,8 @@ body
             width 100%
             border none 
             outline none
+          .error
+            border 3px solid red
 
           input[type='checkbox'] 
             display none
@@ -423,8 +425,10 @@ body
             margin-bottom 0
             @media (max-width: 768px)
               width 100%
+          .error
+            border 3px solid red
 
-            /*-------------------------footer-------------------------------------------*/
+ /*-------------------------footer-------------------------------------------*/
   footer
     display flex
     flex 0 0 auto
@@ -558,7 +562,7 @@ body
     max-width 100%
     height 120px
     max-height 100%
-    background-color #ffcb78;
+    background-color rgba(255, 203, 120, 0.3)
     border 2px solid #ba9255
     .modal-content
       position absolute
@@ -581,9 +585,7 @@ body
       p 
         font-size 18px
         font-weight bold 
-  .invalid
-    border 1px solid red
-  
+
 
             
 
