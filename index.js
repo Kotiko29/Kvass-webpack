@@ -2,23 +2,21 @@
 import style from './src/assets/style/index.styl'; // импорт стилей
 // Помещаем в переменные классы, которые будут использоваться
 let hamb = document.querySelector(`.hamb`),
-    mainHeaderNavigation = document.querySelector(`.main-header-navigation`),
+    mainHeaderNavigation = document.querySelector(`.main-nav`),
     menuClose = document.querySelector(`.menu-close`);
 
 //Определяем поведение меню при клике на кнопку "гамбургер"
 hamb.addEventListener(`click`, function() { // При клике на кнопку меню сработает функция
-    mainHeaderNavigation.style.display = `flex`; // у класса .main-header-navigation меняем 'display none' на 'display flex'
-    hamb.style.display = `none`; // скрываем иконку "гамбургер"
-    menuClose.style.display = `block`; // Отображаем кнопку закрытия меню
-
+    mainHeaderNavigation.classList.toggle('show') // у класса .main-header-navigation переключаем класс show
 });
 //Определяем поведение меню при клике на кнопку "закрыть"
-menuClose.addEventListener(`click`, function() {  // При клике на кнопку "Х" сработает функция
-    mainHeaderNavigation.style.display = `none`; // у класса .main-header-navigation меняем 'display flex' на 'display none'
-    menuClose.style.display = `none`; // скрываем кнопку "X"
-    hamb.style.display = `block`; // Отображаем иконку "гамбургер"
+// menuClose.addEventListener(`click`, function() {  // При клике на кнопку "Х" сработает функция
+//     mainHeaderNavigation.classList.add('hide');
+//     mainHeaderNavigation.classList.remove('show');
+//     menuClose.style.display = `none`; // скрываем кнопку "X"
+//     hamb.style.display = `block`; // Отображаем иконку "гамбургер"
     
-});
+// });
 
 
 // Скрываем и показываем таблицу
