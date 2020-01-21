@@ -7,7 +7,8 @@ let hamb = document.querySelector(`.hamb`),
 
 //Определяем поведение меню при клике на кнопку "гамбургер"
 hamb.addEventListener(`click`, function() { // При клике на кнопку меню сработает функция
-    mainHeaderNavigation.classList.toggle('show') // у класса .main-header-navigation переключаем класс show
+    mainHeaderNavigation.classList.toggle('show'); // у класса .main-header-navigation переключаем класс show
+    hamb.classList.toggle('hamb-close');
 });
 //Определяем поведение меню при клике на кнопку "закрыть"
 // menuClose.addEventListener(`click`, function() {  // При клике на кнопку "Х" сработает функция
@@ -35,7 +36,7 @@ let tr = document.querySelectorAll('.price-list tr'); // добавляем в �
 let priceList = document.querySelector('.price-list');
 for (let i = 0; i < tr.length; i++) { // в цикле перебираем массив tr 
     tr[i].onclick = function() { // при клике на строку вызывается функция, которая добавляет стиль строке
-    tr[i].style.display = 'none';
+    tr[i].remove();
     };
 }
 
@@ -68,7 +69,7 @@ form.addEventListener('submit', function (event) { // При клике отпр
         }
     }
     formModalClose.addEventListener(`click`, function() { // При клике на кнопку  сработает функция
-        formModal.style.display = `none`; // скрываем иконку окно
+        formModal.style.display = `none`; // скрываем окно
     });  
 });
 
