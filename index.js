@@ -60,9 +60,11 @@ form.addEventListener('submit', function (event) { // При клике отпр
     event.preventDefault();  // отменяем переход на новый URL
 
     for (let i = 0; i < fields.length; i++) { // в цикле перебираем элементы формы
-        if (!fields[i].value) { // если получаем false
-            console.log('Поле не заполнено', fields[i]);
-            fields[i].classList.add('error');  // добавляем элементу класс error
+        var element = fields[i];
+        console.log(element);
+        if (!element.value) { // если получаем false
+            console.log('Поле не заполнено', element);
+            element.classList.add('error');  // добавляем элементу класс error
         } else {  // иначе показываем окно с сообщением "Отправлено" 
             feedback.style.display = 'none';
             formModal.style.display = 'block';
