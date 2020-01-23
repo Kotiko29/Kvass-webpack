@@ -66,12 +66,14 @@ form.addEventListener('submit', function (event) { // При клике отпр
             console.log('Поле не заполнено', element);
             element.classList.add('error');  // добавляем элементу класс error
         } else {  // иначе показываем окно с сообщением "Отправлено" 
-            feedback.style.display = 'none';
-            formModal.style.display = 'block';
+            formModal.classList.add('modal-show');
+            
+            
         }
     }
-    formModalClose.addEventListener(`click`, function() { // При клике на кнопку  сработает функция
-        formModal.style.display = `none`; // скрываем окно
-    });  
+    formModalClose.addEventListener('click', function() {
+        formModal.classList.remove('modal-show');
+    });
 });
 
+console.log(formModalClose);
