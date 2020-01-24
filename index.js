@@ -31,14 +31,27 @@ hamb.addEventListener(`click`, function() { // При клике на кнопк
 //         tablePriceList.style.display = `table`;// иначе показываем
 //     }
 // };
+
 // Скрываем строки таблицы при нажатии
 let tr = document.querySelectorAll('.price-list tr'); // добавляем в переменную псевдомассив со строками таблицы
 let priceList = document.querySelector('.price-list');
 for (let i = 0; i < tr.length; i++) { // в цикле перебираем массив tr 
-    tr[i].onclick = function() { // при клике на строку вызывается функция, которая добавляет стиль строке
+    tr[i].onclick = function() { // при клике на строку вызывается функция, которая удаляет элемент
     tr[i].remove();
     };
-}
+} 
+
+// 
+// var deleteTableRows = function(item) {
+//     let trow = priceList.querySelector('.price-list tr'); 
+//     trow.addEventListener('click', function() {
+//         item.remove();
+//     });
+// };
+
+// for (let i = 0; i < tr.length; i++) { // в цикле перебираем массив tr 
+//     deleteTableRows(tr[i]);
+// }
 
 // Form
 let formSend = document.querySelector('#form-send'), 
@@ -67,8 +80,6 @@ form.addEventListener('submit', function (event) { // При клике отпр
             element.classList.add('error');  // добавляем элементу класс error
         } else {  // иначе показываем окно с сообщением "Отправлено" 
             formModal.classList.add('modal-show');
-            
-            
         }
     }
     formModalClose.addEventListener('click', function() {
