@@ -41,18 +41,6 @@ for (let i = 0; i < tr.length; i++) { // в цикле перебираем ма
     };
 } 
 
-// 
-// var deleteTableRows = function(item) {
-//     let trow = priceList.querySelector('.price-list tr'); 
-//     trow.addEventListener('click', function() {
-//         item.remove();
-//     });
-// };
-
-// for (let i = 0; i < tr.length; i++) { // в цикле перебираем массив tr 
-//     deleteTableRows(tr[i]);
-// }
-
 // Form
 let formSend = document.querySelector('#form-send'), 
     form  = document.getElementsByTagName('form')[0],
@@ -88,3 +76,36 @@ form.addEventListener('submit', function (event) { // При клике отпр
 });
 
 console.log(formModalClose);
+
+// Делаем табы
+let tab = document.querySelectorAll('.new-header-tab'),
+    newHeader = document.querySelector('.new-header'),
+    tabContent = document.querySelectorAll('.new-tabcontent');
+    
+    function hideTabContent(a) {
+        for(let i = a; i < tabContent.length; i++){
+            // tabContent[i].classList.remove('show');
+            tabContent[i].classList.add('hide');
+        }
+    }
+    hideTabContent(1);
+
+    function showTabContent(b) {
+        if(tabContent[b].classList.contains('hide')){
+            tabContent[b].classList.remove('hide');
+            // tabContent[b].classList.add('show');
+        }
+    }
+    newHeader.addEventListener('click', function(event){
+        let target = event.target;
+        if(target && target.classList.contains('new-header-tab')){
+            for(let i=0; i < tab.length; i++){
+                if(target == tab[i]){
+                    hideTabContent(0);
+                    showTabContent(i);
+                    break;
+                }
+            }
+        }
+    });
+
