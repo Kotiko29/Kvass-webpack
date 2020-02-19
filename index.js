@@ -78,9 +78,9 @@ form.addEventListener('submit', function (event) { // При клике отпр
 console.log(formModalClose);
 
 // Делаем табы
-let tab = document.querySelectorAll('.new-header-tab'),
-    newHeader = document.querySelector('.new-header'),
-    tabContent = document.querySelectorAll('.new-tabcontent');
+let tab = document.querySelectorAll('.new-header-tab'),// получаем элементы, по которым будем кликать
+    newHeader = document.querySelector('.new-header'), // контейнер элементов
+    tabContent = document.querySelectorAll('.new-tabcontent');//блоки, которые будем менять
     
     function hideTabContent(a) {
         for(let i = a; i < tabContent.length; i++){
@@ -88,21 +88,22 @@ let tab = document.querySelectorAll('.new-header-tab'),
             tabContent[i].classList.add('hide');
         }
     }
-    hideTabContent(1);
+    hideTabContent(1);// скрываем все блоки кроме первого
 
     function showTabContent(b) {
         if(tabContent[b].classList.contains('hide')){
             tabContent[b].classList.remove('hide');
             // tabContent[b].classList.add('show');
         }
-    }
+    }// отображаем необходимый элемент
+
     newHeader.addEventListener('click', function(event){
         let target = event.target;
-        if(target && target.classList.contains('new-header-tab')){
-            for(let i=0; i < tab.length; i++){
-                if(target == tab[i]){
-                    hideTabContent(0);
-                    showTabContent(i);
+        if(target && target.classList.contains('new-header-tab')){//клик по элементу с классом .new-header-tab
+            for(let i=0; i < tab.length; i++){ // перебираем табы
+                if(target == tab[i]){//добавляем номер кнопке
+                    hideTabContent(0);// все скрываем
+                    showTabContent(i); // удаляем класс .hide у выбранного элемента
                     break;
                 }
             }
